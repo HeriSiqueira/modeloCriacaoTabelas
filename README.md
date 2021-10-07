@@ -2,7 +2,7 @@
 
 ## Script de criação de Tabelas para o Banco de Dados EstrelaDaMorte - Projeto DIO
 
->>> CREATE TABLE Planetas(
+###  CREATE TABLE Planetas(
            IdPlaneta int NOT NULL,
            Nome varchar (50) NOT NULL,
            Rotacao float NOT NULL,   
@@ -16,7 +16,7 @@ ALTER TABLE Planetas ADD CONSTRAINT PK_Planetas PRIMARY KEY (IdPlaneta);
 
 
 
->>> CREATE TABLE NAVES(
+###  CREATE TABLE NAVES(
     IdNave int NOT NULL,
     Nome varchar(100) NOT NULL,
     Modelo varchar(100) NOT NULL,
@@ -29,7 +29,7 @@ ALTER TABLE Naves ADD CONSTRAINT PK_Naves PRIMARY KEY (IdNave);
 
 
 
->>> CREATE TABLE Pilotos (
+### CREATE TABLE Pilotos (
          IdPiloto int NOT NULL,
          NOME varchar (200) NOT NULL,
          AnoNascimento varchar(10) NOT NULL,
@@ -43,7 +43,7 @@ REFERENCES Planetas (IdPlaneta)
 
 
 
->>> CREATE TABLE PilotosNaves(
+###  CREATE TABLE PilotosNaves(
            IdPiloto int NOT NULL,
            IdNave int NOT NULL,
            FlagAutorizado bit NOT NULL,
@@ -61,7 +61,7 @@ ALTER TABLE PilotosNaves ADD CONSTRAINT DF_PilotosNaves_FlagAutorizado DEFAULT (
  
 
 
->>> CREATE TABLE HistoricoViagens (
+###  CREATE TABLE HistoricoViagens (
            IdNave int NOTT NULL,
            IdPiloto int NOT NULL,
            DtSaida datetime NOT NULL,
